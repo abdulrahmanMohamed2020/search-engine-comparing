@@ -8,7 +8,7 @@ on:
     branches-ignore:
       - '!master'
   schedule:
-      - cron: '0 */12 * * *'
+      - cron: '0 1 * * *'
 
 jobs:
 
@@ -73,7 +73,7 @@ jobs:
           context: 'Test report'
           state: 'success'
           sha: ${{github.event.pull_request.head.sha || github.sha}}
-          target_url: https://nearcomponents.github.io/qa-auto-gateway/${{ github.run_number }}
+          target_url: https://abdulrahmanmohamed2020.github.io/search-engine-comparing/${{ github.run_number }}
   
       #- name: Send custom JSON data to Slack workflow
       #  id: slack
@@ -88,11 +88,11 @@ jobs:
       #            "type": "section",
       #            "text": {
       #              "type": "mrkdwn",
-      #              "text": "GitHub Action build result: ${{ job.status }}\nAllure Report URL:\n https://nearcomponents.github.io/qa-auto-gateway/${{ github.run_number }}"
+      #              "text": "GitHub Action build result: ${{ job.status }}\nAllure Report URL:\n https://abdulrahmanmohamed2020.github.io/search-engine-comparing/${{ github.run_number }}"
       #            }
       #          }
       #        ]
       #      }
       #  env:
-      #    SLACK_WEBHOOK_URL: https://hooks.slack.com/services/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
+      #    SLACK_WEBHOOK_URL: ********
       #    SLACK_WEBHOOK_TYPE: INCOMING_WEBHOOK
